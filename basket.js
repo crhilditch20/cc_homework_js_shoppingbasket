@@ -13,13 +13,9 @@ var basket = {
     this.items.splice(index, 1);
     this.total = (this.total - item.value);
   },
-  getDiscount: function(discountType, percentage){
-    var discountAmount = this.total*(discountType.calculate(percentage));
-    this.total -= discountAmount;
-    return this.total;
-  }
+  empty: function(){
+    this.items = [];
+  },
 };
-
-
 
 module.exports = basket;

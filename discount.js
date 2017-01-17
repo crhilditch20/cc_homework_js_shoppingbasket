@@ -1,9 +1,23 @@
 var discountPercentage = {
-  calculate: function(percentage){
-    var amount = (percentage/100);
+  calculate: function(){
+    var amount = 0.10;
     return amount;
   }
 };
 
-module.exports = discountPercentage;
+var discountCustomer = {
+  calculate: function(customer){
+    var amount = 0.00;
+    if(customerLoyalty === true){
+      amount = 0.20;
+    } else {
+      amount = 0.00;
+    } return amount;
+  }
+};
+
+discounts = [discountPercentage, discountCustomer];
+
+module.exports = discounts;
+
 

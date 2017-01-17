@@ -4,6 +4,10 @@ var items = require('../item');
 var assert = require('assert');
 
 describe('basket', function(){
+  beforeEach(function(){
+    basket.empty();
+    basket.total = 0;
+  });
   it('basket starts with no items', function(){
     assert.equal(0, basket.countItems());
   });
@@ -16,16 +20,14 @@ describe('basket', function(){
   });
   it('item in basket increases value', function(){
     basket.addItem(items[1]);
-    assert.equal(5.80, basket.total);
+    assert.equal(5.00, basket.total);
   });
   it('can remove item from basket', function(){
+    basket.addItem(items[1]);
+    basket.addItem(items[0]);
     basket.removeItem(items[1]);
     assert.equal(1, basket.countItems());
     assert.equal(0.80, basket.total.toFixed(2));
-  });
-  it('can apply discount', function(){
-    basket.addItem(items[1]);
-    assert.equal(5.22, basket.getDiscount(discount, 10));
   });
 });
 
