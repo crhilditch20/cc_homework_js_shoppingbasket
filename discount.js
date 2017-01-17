@@ -16,7 +16,14 @@ var discountCustomer = {
   }
 };
 
-var discounts = [discountPercentage, discountCustomer];
+var discountBOGOF = {
+  calculate: function(){
+    var amount = 0.5;
+    return amount;
+  }
+};
+
+var discounts = [discountPercentage, discountCustomer, discountBOGOF];
 
 module.exports = discounts;
 
