@@ -6,6 +6,6 @@ describe('item', function(){
     assert.equal("chocolate", items[0].name);
   });
   it('item has value', function(){
-    assert.equal(0.80, items[0].value);
+    assert.equal(1.00, items[2].value);
   })
 });
