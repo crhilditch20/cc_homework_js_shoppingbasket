@@ -17,5 +17,10 @@ describe('basket', function(){
     basket.addItem(items[1]);
     assert.equal(5.80, basket.total);
   });
+  it('can remove item from basket', function(){
+    basket.removeItem(items[1]);
+    assert.equal(1, basket.countItems());
+    assert.equal(0.80, basket.total.toFixed(2));
+  });
 });
 
