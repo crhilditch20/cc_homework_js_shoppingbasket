@@ -1,7 +1,10 @@
 var discountPercentage = {
+  amountToDiscount: 0,
   apply: function(basket, percentage){
-    var amountToDiscount = (basket.total*percentage);
-    basket.total -= this.amountToDiscount;
+    this.amountToDiscount = (basket.total*(percentage/100));
+    return this.amountToDiscount;
   }
-}
+};
+
+module.exports = discountPercentage;
 
