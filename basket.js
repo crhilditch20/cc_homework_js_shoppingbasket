@@ -16,6 +16,16 @@ var basket = {
   empty: function(){
     this.items = [];
   },
+  applyDiscounts: function(availableDiscounts, customer){
+      if(this.total >= 20.00){
+        this.total -= (this.total*availableDiscounts[0].calculate());
+        }
+      if(customer){
+        this.total -= (this.total*availableDiscounts[1].calculate(customer));
+         }
+        return this.total;
+    }
 };
+
 
 module.exports = basket;

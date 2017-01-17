@@ -16,7 +16,7 @@ var discountCustomer = {
   }
 };
 
-discounts = [discountPercentage, discountCustomer];
+var discounts = [discountPercentage, discountCustomer];
 
 module.exports = discounts;
 

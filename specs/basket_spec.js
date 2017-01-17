@@ -1,6 +1,7 @@
 var basket = require('../basket');
-var discount = require('../discount');
+var discounts = require('../discount');
 var items = require('../item');
+var customers = require('../customer');
 var assert = require('assert');
 
 describe('basket', function(){
@@ -28,6 +29,14 @@ describe('basket', function(){
     basket.removeItem(items[1]);
     assert.equal(1, basket.countItems());
     assert.equal(0.80, basket.total.toFixed(2));
+  });
+  it('basket discounts applied correctly', function(){
+    basket.addItem(items[1]);
+    basket.addItem(items[1]);
+    basket.addItem(items[1]);
+    basket.addItem(items[1]);
+    basket.addItem(items[1]);
+    assert.equal(21.38, basket.applyDiscounts(discounts, customers[0]).toFixed(2));
   });
 });
 

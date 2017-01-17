@@ -1,5 +1,5 @@
 var customers = require('../customer');
-var discount = require('../discount');
+var discounts = require('../discount');
 var assert = require('assert');
 
 describe('discount', function(){
