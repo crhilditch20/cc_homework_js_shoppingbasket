@@ -8,7 +8,7 @@ var discountPercentage = {
 var discountCustomer = {
   calculate: function(customer){
     var amount = 0.00;
-    if(customerLoyalty === true){
+    if(customer.loyaltyCard === true){
       amount = 0.20;
     } else {
       amount = 0.00;
