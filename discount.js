@@ -9,7 +9,7 @@ var discountCustomer = {
   calculate: function(customer){
     var amount = 0.00;
     if(customer.loyaltyCard === true){
-      amount = 0.20;
+      amount = 0.05;
     } else {
       amount = 0.00;
     } return amount;
