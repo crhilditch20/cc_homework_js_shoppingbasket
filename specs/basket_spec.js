@@ -13,5 +13,9 @@ describe('basket', function(){
     basket.addItem(items[0]);
     assert.equal(1, basket.countItems());
   });
+  it('item in basket increases value', function(){
+    basket.addItem(items[1]);
+    assert.equal(5.80, basket.total);
+  });
 });
 

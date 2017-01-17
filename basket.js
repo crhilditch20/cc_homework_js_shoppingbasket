@@ -6,6 +6,7 @@ var basket = {
   },
   addItem: function(item){
     this.items.push(item);
+    this.total += item.value;
   }
 }
 
